@@ -1,0 +1,208 @@
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(180deg, #000, #000030);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-status {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #00aaff;
+}
+
+.timer {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.lifeline-panel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.lifeline-button {
+    background-color: #004080;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.lifeline-button:hover {
+    background-color: #0055a4;
+    box-shadow: 0 0 10px #00aaff;
+}
+
+.lifeline-button:disabled {
+    background-color: #333;
+    border-color: #666;
+    cursor: not-allowed;
+}
+
+.question {
+    padding: 15px 30px;
+    background-color: #00264d;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00aaff;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    font-size: 1.4em;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    justify-content: center;
+}
+
+.answer-button {
+    padding: 12px 25px;
+    background-color: #004080;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00aaff;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.answer-button:hover {
+    background-color: #0055a4;
+    box-shadow: 0 0 15px #00aaff;
+}
+
+.answer-button:disabled {
+    background-color: #333;
+    border-color: #666;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.side-panel {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 20%;
+    background-color: #0a0e2e;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    box-shadow: 0 0 15px #00aaff;
+}
+
+.prize-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.prize-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 18px;
+    background-color: #1a237e;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.prize-item.active {
+    background-color: #ff6f00;
+    color: #fff;
+}
+
+.prize-item .question-number {
+    font-weight: bold;
+    flex: 1;
+}
+
+.prize-item .prize-amount {
+    flex: 3;
+    text-align: right;
+}
+
+.prize-item.active .prize-amount {
+    font-size: 22px;
+}
+
+.prize-item.milestone .prize-amount {
+    color: white; 
+}
+
+.prize-item .prize-amount:not(.milestone) {
+    color: #ffea00;
+}
+
+@media (max-width: 768px) {
+    .question, .answers, .lifeline-panel {
+        width: 100%;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .answer-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .lifeline-button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .game-status, .timer {
+        font-size: 1em;
+    }
+
+    .side-panel {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .question {
+        font-size: 1.2em;
+        padding: 15px 20px;
+    }
+
+    .answer-button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .lifeline-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    .timer {
+        font-size: 1.8em;
+    }
+}

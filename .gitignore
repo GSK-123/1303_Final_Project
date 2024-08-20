@@ -1,0 +1,83 @@
+### General ###
+HELP.md
+
+### Gradle ###
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS (Spring Tool Suite) ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Node.js ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+### Logs ###
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### Dependency directories ###
+node_modules/
+jspm_packages/
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.swp
+
+### Eclipse ###
+.metadata/
+*.log
+*.bak
+*.swp
+*~.nib
+local.properties
+.DS_Store
+.eclipse/
+target/
+
+### Mac ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
+Desktop.ini
